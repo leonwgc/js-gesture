@@ -18,6 +18,9 @@
     "build": "tsc -p tsconfig.build.json",
     "test": "vitest run",
     "typecheck": "vue-tsc -p tsconfig.json --noEmit",
+    "prepublishOnly": "npm run typecheck && npm test",
+    "prepack": "npm run build",
+    "publish:npm": "npm publish --registry=https://registry.npmjs.org/ --access public",
     "demo": "vite --host 127.0.0.1",
     "demo:build": "vite build"
   },

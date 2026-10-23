@@ -4,7 +4,7 @@ A small TypeScript gesture detector for a single DOM element. It uses Pointer Ev
 
 ## Install and use
 
-Once published, install it with `npm install js-gesture`. For local integration before publishing, build this repository and install it with `npm install /path/to/js-gesture`.
+After publishing, install it with `npm install js-gesture`. For local integration before publishing, build this repository and install it with `npm install /path/to/js-gesture`.
 
 ```ts
 import { createGesture } from 'js-gesture';
@@ -55,6 +55,17 @@ Single-pointer events include `type`, `x`, `y`, `startX`, `startY`, `deltaX`, `d
 | `touchAction` | `'none'` | Inline CSS value; `null` leaves the element unchanged. |
 
 By default, the library sets `touch-action: none` on the bound element so browsers deliver all four swipe directions and two-pointer gestures. This disables native scrolling and browser zoom gestures **inside that element**. Set `touchAction: 'pan-y'` when vertical page scrolling matters more than vertical gesture detection, or `null` to manage CSS yourself. `destroy()` restores the previous inline value.
+
+## Publish to npm
+
+Sign in to an npm account that can publish `js-gesture`, and update the package version before each release. Preview the package, then publish:
+
+```bash
+npm run publish:npm -- --dry-run
+npm run publish:npm
+```
+
+`prepublishOnly` runs the type check and tests. `prepack` builds the ESM JavaScript and TypeScript declarations in `dist/`, including when using `npm pack`. Only `dist/` and npm's standard package metadata are included in the published tarball. The publish command targets the public npm registry; npm may request authentication or a one-time code. A dry run does not upload the package.
 
 ## Demos and development
 
