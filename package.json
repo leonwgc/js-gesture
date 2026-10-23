@@ -1,7 +1,7 @@
 {
   "name": "js-gesture",
   "version": "0.1.0",
-  "description": "Typed pointer gestures for browsers",
+  "description": "A lightweight TypeScript gesture library for mouse, touch, and pen. Detect tap, swipe, pan, pinch, and rotate with a simple ESM API.",
   "type": "module",
   "sideEffects": false,
   "files": [
