@@ -5,18 +5,48 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" href="data:," />
     <title>js-gesture demos</title>
-    <link rel="stylesheet" crossorigin href="/js-gesture/assets/style-DA3bqtX9.css">
+    <link rel="stylesheet" crossorigin href="/js-gesture/assets/style-CYIG9oFM.css">
   </head>
   <body>
-    <main class="home">
-      <p class="eyebrow">A little playground for pointer gestures</p>
-      <h1>js-gesture</h1>
-      <p class="intro">Explore taps, swipes, drags, pinches, and rotation with the same typed API in three environments.</p>
-      <nav aria-label="Demos">
-        <a href="demo/vanilla.html"><span>01 / Native DOM</span><strong>Start with the browser</strong></a>
-        <a href="demo/react.html"><span>02 / React</span><strong>Use a component effect</strong></a>
-        <a href="demo/vue.html"><span>03 / Vue 3</span><strong>Use lifecycle hooks</strong></a>
+    <div class="announcement"><span class="announcement__mark">✦</span> POINTER EVENTS · TYPESCRIPT · ESM <span aria-hidden="true">↗</span></div>
+    <header class="site-header">
+      <a class="brand" href="./" aria-label="js-gesture home"><span class="brand__icon">↗</span> JS-GESTURE<span class="brand__dot">.</span></a>
+      <nav class="site-nav" aria-label="Main navigation">
+        <a href="#examples">Examples</a>
+        <a href="https://github.com/leonwgc/js-gesture">GitHub <span aria-hidden="true">↗</span></a>
       </nav>
+    </header>
+    <main class="home">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero__copy">
+          <p class="eyebrow">A tiny library for every pointer</p>
+          <h1 id="hero-title">Gestures, made<br /><span>simple.</span></h1>
+          <p class="intro">Tap, swipe, drag, pinch, and rotate. One typed API for mouse, touch, and pen—ready for the browser, React, and Vue.</p>
+          <div class="hero__actions">
+            <a class="button button--primary" href="#examples">Explore examples <span aria-hidden="true">↗</span></a>
+            <a class="button button--secondary" href="https://github.com/leonwgc/js-gesture">View on GitHub <span aria-hidden="true">↗</span></a>
+          </div>
+          <p class="hero__footnote">Zero runtime dependencies <span aria-hidden="true">·</span> Pure ESM</p>
+        </div>
+        <div class="hero-art" aria-hidden="true">
+          <div class="hero-art__orbit hero-art__orbit--one"></div>
+          <div class="hero-art__orbit hero-art__orbit--two"></div>
+          <div class="hero-art__layer hero-art__layer--top"><span>TAP</span></div>
+          <div class="hero-art__layer hero-art__layer--middle"><span>SWIPE</span></div>
+          <div class="hero-art__layer hero-art__layer--bottom"><span>PINCH</span></div>
+          <div class="hero-art__core"><span>↗</span></div>
+          <span class="hero-art__label hero-art__label--left">01 / INPUT</span>
+          <span class="hero-art__label hero-art__label--right">02 / GESTURE</span>
+        </div>
+      </section>
+      <section class="examples" id="examples" aria-labelledby="examples-title">
+        <div class="section-heading"><div><p class="eyebrow">Try it yourself</p><h2 id="examples-title">Choose your setup</h2></div><p>Each example is interactive and includes its source code.</p></div>
+        <div class="example-grid">
+          <a href="demo/vanilla.html"><span class="example-grid__number">01 / NATIVE DOM</span><strong>Start with the browser</strong><span class="example-grid__arrow" aria-hidden="true">↗</span></a>
+          <a href="demo/react.html"><span class="example-grid__number">02 / REACT</span><strong>Use a component effect</strong><span class="example-grid__arrow" aria-hidden="true">↗</span></a>
+          <a href="demo/vue.html"><span class="example-grid__number">03 / VUE 3</span><strong>Use lifecycle hooks</strong><span class="example-grid__arrow" aria-hidden="true">↗</span></a>
+        </div>
+      </section>
     </main>
   </body>
 </html>

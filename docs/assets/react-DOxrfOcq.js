@@ -33,23 +33,34 @@ function App() {
     return () => gesture.destroy();
   }, []);
 
-  return <main>
-    <a href="../">← All demos</a>
-    <h1>React</h1>
-    <p>The gesture instance is tied to the component lifecycle.</p>
-    <div ref={areaRef} className="gesture-area" tabIndex={0} aria-label="Gesture area">
-      <span className="gesture-area__title">Try a gesture here</span>
-      <span className="gesture-area__hint">Tap · hold · drag · swipe · use two fingers</span>
-    </div>
-    <output className="result" aria-live="polite">{result}</output>
-    <section className="source">
-      <h2>Source code</h2>
-      <pre><code>{source}</code></pre>
-    </section>
-  </main>;
+  return <>
+    <div className="announcement"><span className="announcement__mark">✦</span> POINTER EVENTS · TYPESCRIPT · ESM <span aria-hidden="true">↗</span></div>
+    <header className="site-header">
+      <a className="brand" href="../" aria-label="js-gesture home"><span className="brand__icon">↗</span> JS-GESTURE<span className="brand__dot">.</span></a>
+      <nav className="site-nav" aria-label="Main navigation"><a href="../#examples">Examples</a><a href="https://github.com/leonwgc/js-gesture">GitHub <span aria-hidden="true">↗</span></a></nav>
+    </header>
+    <main className="demo-page">
+      <div className="demo-heading"><a className="back-link" href="../#examples">← All examples</a><p className="eyebrow">02 / React</p><h1>Gesture meets component<span>.</span></h1><p>The gesture instance is tied to the component lifecycle.</p></div>
+      <div className="demo-grid">
+        <section className="playground" aria-labelledby="playground-title">
+          <div className="panel-heading"><h2 id="playground-title">Playground</h2><span>LIVE DEMO <i /></span></div>
+          <div ref={areaRef} className="gesture-area" tabIndex={0} aria-label="Gesture area">
+            <span className="gesture-area__symbol" aria-hidden="true">↗</span>
+            <span className="gesture-area__title">Try a gesture here</span>
+            <span className="gesture-area__hint">Tap · hold · drag · swipe · use two fingers</span>
+          </div>
+          <div className="result-row"><span>DETECTED EVENT</span><output className="result" aria-live="polite">{result}</output></div>
+        </section>
+        <section className="source" aria-labelledby="source-title">
+          <div className="panel-heading"><h2 id="source-title">Source code</h2><span>REACT + TYPESCRIPT</span></div>
+          <pre><code>{source}</code></pre>
+        </section>
+      </div>
+    </main>
+  </>;
 }
 
 const root = document.getElementById('root');
 if (!root) throw new Error('React demo root is missing');
 createRoot(root).render(<App />);
-`,p=t((e=>{var t=Symbol.for(`react.transitional.element`);function n(e,n,r){var i=null;if(r!==void 0&&(i=``+r),n.key!==void 0&&(i=``+n.key),`key`in n)for(var a in r={},n)a!==`key`&&(r[a]=n[a]);else r=n;return n=r.ref,{$$typeof:t,type:e,key:i,ref:n===void 0?null:n,props:r}}e.jsx=n,e.jsxs=n})),m=t(((e,t)=>{t.exports=p()}))();function h(){let t=(0,u.useRef)(null),[n,r]=(0,u.useState)(`Waiting for a gesture…`);return(0,u.useEffect)(()=>{let n=t.current;if(!n)return;let i=e(n,{tap:()=>r(`tap`),doubleTap:()=>r(`doubleTap`),longPress:()=>r(`longPress`),panMove:({deltaX:e,deltaY:t})=>r(`pan: ${Math.round(e)}, ${Math.round(t)}`),swipeLeft:()=>r(`swipeLeft`),swipeRight:()=>r(`swipeRight`),swipeUp:()=>r(`swipeUp`),swipeDown:()=>r(`swipeDown`),pinch:({scale:e})=>r(`pinch: ${e.toFixed(2)}×`),rotate:({rotation:e})=>r(`rotate: ${e.toFixed(1)}°`)});return()=>i.destroy()},[]),(0,m.jsxs)(`main`,{children:[(0,m.jsx)(`a`,{href:`../`,children:`← All demos`}),(0,m.jsx)(`h1`,{children:`React`}),(0,m.jsx)(`p`,{children:`The gesture instance is tied to the component lifecycle.`}),(0,m.jsxs)(`div`,{ref:t,className:`gesture-area`,tabIndex:0,"aria-label":`Gesture area`,children:[(0,m.jsx)(`span`,{className:`gesture-area__title`,children:`Try a gesture here`}),(0,m.jsx)(`span`,{className:`gesture-area__hint`,children:`Tap · hold · drag · swipe · use two fingers`})]}),(0,m.jsx)(`output`,{className:`result`,"aria-live":`polite`,children:n}),(0,m.jsxs)(`section`,{className:`source`,children:[(0,m.jsx)(`h2`,{children:`Source code`}),(0,m.jsx)(`pre`,{children:(0,m.jsx)(`code`,{children:f})})]})]})}var g=document.getElementById(`root`);if(!g)throw Error(`React demo root is missing`);(0,d.createRoot)(g).render((0,m.jsx)(h,{}));
+`,p=t((e=>{var t=Symbol.for(`react.transitional.element`),n=Symbol.for(`react.fragment`);function r(e,n,r){var i=null;if(r!==void 0&&(i=``+r),n.key!==void 0&&(i=``+n.key),`key`in n)for(var a in r={},n)a!==`key`&&(r[a]=n[a]);else r=n;return n=r.ref,{$$typeof:t,type:e,key:i,ref:n===void 0?null:n,props:r}}e.Fragment=n,e.jsx=r,e.jsxs=r})),m=t(((e,t)=>{t.exports=p()}))();function h(){let t=(0,u.useRef)(null),[n,r]=(0,u.useState)(`Waiting for a gesture…`);return(0,u.useEffect)(()=>{let n=t.current;if(!n)return;let i=e(n,{tap:()=>r(`tap`),doubleTap:()=>r(`doubleTap`),longPress:()=>r(`longPress`),panMove:({deltaX:e,deltaY:t})=>r(`pan: ${Math.round(e)}, ${Math.round(t)}`),swipeLeft:()=>r(`swipeLeft`),swipeRight:()=>r(`swipeRight`),swipeUp:()=>r(`swipeUp`),swipeDown:()=>r(`swipeDown`),pinch:({scale:e})=>r(`pinch: ${e.toFixed(2)}×`),rotate:({rotation:e})=>r(`rotate: ${e.toFixed(1)}°`)});return()=>i.destroy()},[]),(0,m.jsxs)(m.Fragment,{children:[(0,m.jsxs)(`div`,{className:`announcement`,children:[(0,m.jsx)(`span`,{className:`announcement__mark`,children:`✦`}),` POINTER EVENTS · TYPESCRIPT · ESM `,(0,m.jsx)(`span`,{"aria-hidden":`true`,children:`↗`})]}),(0,m.jsxs)(`header`,{className:`site-header`,children:[(0,m.jsxs)(`a`,{className:`brand`,href:`../`,"aria-label":`js-gesture home`,children:[(0,m.jsx)(`span`,{className:`brand__icon`,children:`↗`}),` JS-GESTURE`,(0,m.jsx)(`span`,{className:`brand__dot`,children:`.`})]}),(0,m.jsxs)(`nav`,{className:`site-nav`,"aria-label":`Main navigation`,children:[(0,m.jsx)(`a`,{href:`../#examples`,children:`Examples`}),(0,m.jsxs)(`a`,{href:`https://github.com/leonwgc/js-gesture`,children:[`GitHub `,(0,m.jsx)(`span`,{"aria-hidden":`true`,children:`↗`})]})]})]}),(0,m.jsxs)(`main`,{className:`demo-page`,children:[(0,m.jsxs)(`div`,{className:`demo-heading`,children:[(0,m.jsx)(`a`,{className:`back-link`,href:`../#examples`,children:`← All examples`}),(0,m.jsx)(`p`,{className:`eyebrow`,children:`02 / React`}),(0,m.jsxs)(`h1`,{children:[`Gesture meets component`,(0,m.jsx)(`span`,{children:`.`})]}),(0,m.jsx)(`p`,{children:`The gesture instance is tied to the component lifecycle.`})]}),(0,m.jsxs)(`div`,{className:`demo-grid`,children:[(0,m.jsxs)(`section`,{className:`playground`,"aria-labelledby":`playground-title`,children:[(0,m.jsxs)(`div`,{className:`panel-heading`,children:[(0,m.jsx)(`h2`,{id:`playground-title`,children:`Playground`}),(0,m.jsxs)(`span`,{children:[`LIVE DEMO `,(0,m.jsx)(`i`,{})]})]}),(0,m.jsxs)(`div`,{ref:t,className:`gesture-area`,tabIndex:0,"aria-label":`Gesture area`,children:[(0,m.jsx)(`span`,{className:`gesture-area__symbol`,"aria-hidden":`true`,children:`↗`}),(0,m.jsx)(`span`,{className:`gesture-area__title`,children:`Try a gesture here`}),(0,m.jsx)(`span`,{className:`gesture-area__hint`,children:`Tap · hold · drag · swipe · use two fingers`})]}),(0,m.jsxs)(`div`,{className:`result-row`,children:[(0,m.jsx)(`span`,{children:`DETECTED EVENT`}),(0,m.jsx)(`output`,{className:`result`,"aria-live":`polite`,children:n})]})]}),(0,m.jsxs)(`section`,{className:`source`,"aria-labelledby":`source-title`,children:[(0,m.jsxs)(`div`,{className:`panel-heading`,children:[(0,m.jsx)(`h2`,{id:`source-title`,children:`Source code`}),(0,m.jsx)(`span`,{children:`REACT + TYPESCRIPT`})]}),(0,m.jsx)(`pre`,{children:(0,m.jsx)(`code`,{children:f})})]})]})]})]})}var g=document.getElementById(`root`);if(!g)throw Error(`React demo root is missing`);(0,d.createRoot)(g).render((0,m.jsx)(h,{}));

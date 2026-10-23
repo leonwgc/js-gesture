@@ -8,19 +8,28 @@
     <link rel="stylesheet" href="/demo/style.css" />
   </head>
   <body>
-    <main>
-      <a href="../">← All demos</a>
-      <h1>Native DOM</h1>
-      <p>Tap, double tap, hold, drag, swipe, or use two fingers.</p>
-      <div id="gesture-area" class="gesture-area" tabindex="0" aria-label="Gesture area">
-        <span class="gesture-area__title">Try a gesture here</span>
-        <span class="gesture-area__hint">Tap · hold · drag · swipe · use two fingers</span>
+    <div class="announcement"><span class="announcement__mark">✦</span> POINTER EVENTS · TYPESCRIPT · ESM <span aria-hidden="true">↗</span></div>
+    <header class="site-header">
+      <a class="brand" href="../" aria-label="js-gesture home"><span class="brand__icon">↗</span> JS-GESTURE<span class="brand__dot">.</span></a>
+      <nav class="site-nav" aria-label="Main navigation"><a href="../#examples">Examples</a><a href="https://github.com/leonwgc/js-gesture">GitHub <span aria-hidden="true">↗</span></a></nav>
+    </header>
+    <main class="demo-page">
+      <div class="demo-heading"><a class="back-link" href="../#examples">← All examples</a><p class="eyebrow">01 / Native DOM</p><h1>Start with the browser<span>.</span></h1><p>Tap, double tap, hold, drag, swipe, or use two fingers.</p></div>
+      <div class="demo-grid">
+        <section class="playground" aria-labelledby="playground-title">
+          <div class="panel-heading"><h2 id="playground-title">Playground</h2><span>LIVE DEMO <i></i></span></div>
+          <div id="gesture-area" class="gesture-area" tabindex="0" aria-label="Gesture area">
+            <span class="gesture-area__symbol" aria-hidden="true">↗</span>
+            <span class="gesture-area__title">Try a gesture here</span>
+            <span class="gesture-area__hint">Tap · hold · drag · swipe · use two fingers</span>
+          </div>
+          <div class="result-row"><span>DETECTED EVENT</span><output id="result" class="result" aria-live="polite">Waiting for a gesture…</output></div>
+        </section>
+        <section class="source" aria-labelledby="source-title">
+          <div class="panel-heading"><h2 id="source-title">Source code</h2><span>TYPESCRIPT</span></div>
+          <pre><code id="source-code"></code></pre>
+        </section>
       </div>
-      <output id="result" class="result" aria-live="polite">Waiting for a gesture…</output>
-      <section class="source">
-        <h2>Source code</h2>
-        <pre><code id="source-code"></code></pre>
-      </section>
     </main>
     <script type="module" src="/demo/vanilla.ts"></script>
   </body>
