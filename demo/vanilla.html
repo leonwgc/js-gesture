@@ -12,8 +12,15 @@
       <a href="../">← All demos</a>
       <h1>Native DOM</h1>
       <p>Tap, double tap, hold, drag, swipe, or use two fingers.</p>
-      <div id="gesture-area" class="gesture-area" tabindex="0" aria-label="Gesture area">Gesture area</div>
+      <div id="gesture-area" class="gesture-area" tabindex="0" aria-label="Gesture area">
+        <span class="gesture-area__title">Try a gesture here</span>
+        <span class="gesture-area__hint">Tap · hold · drag · swipe · use two fingers</span>
+      </div>
       <output id="result" class="result" aria-live="polite">Waiting for a gesture…</output>
+      <section class="source">
+        <h2>Source code</h2>
+        <pre><code id="source-code"></code></pre>
+      </section>
     </main>
     <script type="module" src="/demo/vanilla.ts"></script>
   </body>

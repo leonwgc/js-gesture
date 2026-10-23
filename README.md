@@ -58,6 +58,8 @@ By default, the library sets `touch-action: none` on the bound element so browse
 
 ## Demos and development
 
+The demo build uses Vite 8 and requires Node.js 20.19+ on the 20.x line, or Node.js 22.12+.
+
 ```bash
 npm install
 npm run build
@@ -67,7 +69,7 @@ npm run demo:build
 npm run demo
 ```
 
-Open the URL printed by Vite to choose the native DOM, React, or Vue 3 demo. All three examples use `createGesture` and dispose of the instance at the appropriate lifecycle boundary. The demo imports the local source through a Vite alias; consumers import the package as shown above.
+Open the URL printed by Vite to choose the native DOM, React, or Vue 3 demo. Each example displays its own source code below the gesture area. All three examples use `createGesture` and dispose of the instance at the appropriate lifecycle boundary. The demo imports the local source through a Vite alias; consumers import the package as shown above.
 
 The live demos are at [leonwgc.github.io/js-gesture/](https://leonwgc.github.io/js-gesture/). `npm run demo:build` writes the GitHub Pages site to `docs/`; commit that directory when updating the demos. GitHub Pages publishes the `docs/` folder on the `master` branch.
 

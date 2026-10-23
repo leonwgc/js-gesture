@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
 import { createRoot } from 'react-dom/client';
 import { createGesture } from 'js-gesture';
+import source from './react.tsx?raw';
 
 function App() {
   const areaRef = useRef<HTMLDivElement>(null);
@@ -28,8 +29,15 @@ function App() {
     <a href="../">← All demos</a>
     <h1>React</h1>
     <p>The gesture instance is tied to the component lifecycle.</p>
-    <div ref={areaRef} className="gesture-area" tabIndex={0} aria-label="Gesture area">Gesture area</div>
+    <div ref={areaRef} className="gesture-area" tabIndex={0} aria-label="Gesture area">
+      <span className="gesture-area__title">Try a gesture here</span>
+      <span className="gesture-area__hint">Tap · hold · drag · swipe · use two fingers</span>
+    </div>
     <output className="result" aria-live="polite">{result}</output>
+    <section className="source">
+      <h2>Source code</h2>
+      <pre><code>{source}</code></pre>
+    </section>
   </main>;
 }
 

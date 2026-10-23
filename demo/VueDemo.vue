@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { onBeforeUnmount, onMounted, ref } from 'vue';
 import { createGesture, type GestureController } from 'js-gesture';
+import source from './VueDemo.vue?raw';
 
 const area = ref<HTMLElement | null>(null);
 const result = ref('Waiting for a gesture…');
@@ -32,7 +33,14 @@ onBeforeUnmount(() => gesture?.destroy());
     <a href="../">← All demos</a>
     <h1>Vue 3</h1>
     <p>The gesture instance is tied to the component lifecycle.</p>
-    <div ref="area" class="gesture-area" tabindex="0" aria-label="Gesture area">Gesture area</div>
+    <div ref="area" class="gesture-area" tabindex="0" aria-label="Gesture area">
+      <span class="gesture-area__title">Try a gesture here</span>
+      <span class="gesture-area__hint">Tap · hold · drag · swipe · use two fingers</span>
+    </div>
     <output class="result" aria-live="polite">{{ result }}</output>
+    <section class="source">
+      <h2>Source code</h2>
+      <pre><code>{{ source }}</code></pre>
+    </section>
   </main>
 </template>

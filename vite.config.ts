@@ -8,7 +8,7 @@ export default defineConfig(({ command }) => ({
   plugins: [react(), vue()],
   build: {
     outDir: 'docs',
-    rollupOptions: {
+    rolldownOptions: {
       input: {
         index: fileURLToPath(new URL('./index.html', import.meta.url)),
         vanilla: fileURLToPath(new URL('./demo/vanilla.html', import.meta.url)),

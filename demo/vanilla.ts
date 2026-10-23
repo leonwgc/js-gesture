@@ -1,9 +1,13 @@
 import { createGesture } from 'js-gesture';
+import source from './vanilla.ts?raw';
 
 const area = document.querySelector<HTMLElement>('#gesture-area');
 const result = document.querySelector<HTMLOutputElement>('#result');
+const sourceCode = document.querySelector<HTMLElement>('#source-code');
 
-if (!area || !result) throw new Error('Demo elements are missing');
+if (!area || !result || !sourceCode) throw new Error('Demo elements are missing');
+
+sourceCode.textContent = source;
 
 const show = (message: string) => { result.textContent = message; };
 
