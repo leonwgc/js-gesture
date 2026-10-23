@@ -29,7 +29,7 @@ onBeforeUnmount(() => gesture?.destroy());
 
 <template>
   <main>
-    <a href="/">← All demos</a>
+    <a href="../">← All demos</a>
     <h1>Vue 3</h1>
     <p>The gesture instance is tied to the component lifecycle.</p>
     <div ref="area" class="gesture-area" tabindex="0" aria-label="Gesture area">Gesture area</div>

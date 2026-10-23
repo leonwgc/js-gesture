@@ -69,4 +69,6 @@ npm run demo
 
 Open the URL printed by Vite to choose the native DOM, React, or Vue 3 demo. All three examples use `createGesture` and dispose of the instance at the appropriate lifecycle boundary. The demo imports the local source through a Vite alias; consumers import the package as shown above.
 
+The live demos are at [leonwgc.github.io/js-gesture/](https://leonwgc.github.io/js-gesture/). `npm run demo:build` writes the GitHub Pages site to `docs/`; commit that directory when updating the demos. GitHub Pages publishes the `docs/` folder on the `master` branch.
+
 The package targets browsers with Pointer Events support. It does not polyfill older browsers. Mouse input supports one-pointer gestures; pinch and rotate require two simultaneous pointers.

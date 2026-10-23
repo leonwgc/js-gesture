@@ -3,10 +3,11 @@ import react from '@vitejs/plugin-react';
 import vue from '@vitejs/plugin-vue';
 import { fileURLToPath } from 'node:url';
 
-export default defineConfig({
+export default defineConfig(({ command }) => ({
+  base: command === 'build' ? '/js-gesture/' : '/',
   plugins: [react(), vue()],
   build: {
-    outDir: 'demo-dist',
+    outDir: 'docs',
     rollupOptions: {
       input: {
         index: fileURLToPath(new URL('./index.html', import.meta.url)),
@@ -21,4 +22,4 @@ export default defineConfig({
       'js-gesture': fileURLToPath(new URL('./src/index.ts', import.meta.url)),
     },
   },
-});
+}));

@@ -25,7 +25,7 @@ function App() {
   }, []);
 
   return <main>
-    <a href="/">← All demos</a>
+    <a href="../">← All demos</a>
     <h1>React</h1>
     <p>The gesture instance is tied to the component lifecycle.</p>
     <div ref={areaRef} className="gesture-area" tabIndex={0} aria-label="Gesture area">Gesture area</div>
